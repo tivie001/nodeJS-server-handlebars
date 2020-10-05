@@ -1,0 +1,26 @@
+{{#each characters}}
+    <div class="card" style="width: 18rem; font-family: Raleway">
+        <img src="{{{this.image}}}" height="400px" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{ this.name }}</h5>
+            <p class="card-text" style="font-size: 14px">
+                <span style="font-variant: all-small-caps; color: #b1b1b1; padding-right: 5px">House: </span>{{ this.house }}<br>
+                <span style="font-variant: all-small-caps; color: #b1b1b1; padding-right: 5px">Alias: </span>
+                {{#if this.alias}}
+                    {{this.alias}} is equal to {{this.alias}}
+                {{else}}
+                    <span>N/A</span>
+                {{/if}}
+                <br>
+                <span style="font-variant: all-small-caps; color: #b1b1b1; padding-right: 5px">Wand: </span>
+                {{#if this.wand}}
+                    {{this.wand}} is equal to {{this.wand}}
+                {{else}}
+                    <span>N/A</span>
+                {{/if}}
+            </p>
+        </div>
+    </div>
+{{/each}}
+
+
